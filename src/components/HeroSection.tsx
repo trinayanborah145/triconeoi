@@ -126,12 +126,20 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
           @keyframes drawLine {
             to { width: 100%; }
           }
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-scroll-left {
+            display: inline-block;
+            animation: scroll-left 30s linear infinite;
+          }
         `}</style>
 
         {/* Main Headline */}
         <h1 
           ref={headingRef}
-          className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-0 px-4 w-full max-w-[90vw] mx-auto"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-0 px-4 w-full max-w-[90vw] mx-auto"
         >
           <div className="flex flex-col">
             <div className="inline-flex flex-wrap justify-center gap-x-2">
@@ -149,9 +157,9 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         {/* Subtitle */}
         <p 
           ref={subtitleRef}
-          className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 sm:mb-10 px-4 opacity-0"
+          className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-8 sm:mb-10 px-4 opacity-0 text-balance"
         >
-          High-converting websites designed with strategic copy and seamless development to attract ready-to-buy customers—helping brands worldwide turn visitors into loyal clients and drive growth.
+          High-converting websites designed with strategic copy and seamless development to attract ready-to-buy customers—helping brands worldwide turn visitors into loyal clients and drive sustainable business growth.
         </p>
 
         {/* CTA Buttons */}
@@ -173,10 +181,14 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         </div>
 
         {/* Client Logos */}
-        <div ref={logosRef} className="mt-12 sm:mt-16 opacity-0 px-2">
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll-left whitespace-nowrap">
-              <div className="flex items-center space-x-6 sm:space-x-12 text-white text-sm sm:text-lg font-medium">
+        <div ref={logosRef} className="mt-12 sm:mt-16 opacity-0 px-2 w-full">
+          <div className="relative w-full overflow-hidden">
+            <div className="flex w-max animate-scroll-left whitespace-nowrap" style={{
+              animationDuration: '30s',
+              animationIterationCount: 'infinite',
+              animationTimingFunction: 'linear'
+            }}>
+              <div className="flex items-center space-x-6 sm:space-x-12 text-white text-sm sm:text-lg font-medium flex-shrink-0">
                 <span>Room Editors</span>
                 <span>Deeu Production</span>
                 <span>Veritas Media</span>
