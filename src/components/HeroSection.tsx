@@ -73,7 +73,7 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
       <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-gradient-to-l from-primary/10 to-transparent blur-2xl float-animation"></div>
       
       {/* Main Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <style>{`
           @keyframes textReveal {
             from {
@@ -131,12 +131,12 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         {/* Main Headline */}
         <h1 
           ref={headingRef}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 opacity-0"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-0 px-2"
         >
           <span className="inline-block" style={{ animationDelay: '0.1s' }}>We build </span>
           <span className="highlight-text inline-block" style={{ animationDelay: '0.2s' }}>websites </span>
           <span className="inline-block" style={{ animationDelay: '0.3s' }}>that turn</span>
-          <br className="hidden md:block" />
+          <br className="hidden xs:block" />
           <span className="inline-block" style={{ animationDelay: '0.4s' }}>visitors into </span>
           <span className="highlight-text inline-block" style={{ animationDelay: '0.5s' }}>paying customers</span>
         </h1>
@@ -144,7 +144,7 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         {/* Subtitle */}
         <p 
           ref={subtitleRef}
-          className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-10 opacity-0"
+          className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 sm:mb-10 px-4 opacity-0"
         >
           High-converting websites designed with strategic copy and seamless development to attract ready-to-buy customers—helping brands worldwide turn visitors into loyal clients and drive growth.
         </p>
@@ -152,7 +152,7 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         {/* CTA Buttons */}
         <div 
           ref={ctaRef}
-          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 opacity-0"
+          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 px-4 opacity-0"
         >
           <button 
             onClick={scrollToCalendly}
@@ -168,10 +168,10 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         </div>
 
         {/* Client Logos */}
-        <div ref={logosRef} className="mt-16 opacity-0">
+        <div ref={logosRef} className="mt-12 sm:mt-16 opacity-0 px-2">
           <div className="overflow-hidden">
             <div className="flex animate-scroll-left whitespace-nowrap">
-              <div className="flex items-center space-x-12 text-muted-foreground/60 text-lg font-medium">
+              <div className="flex items-center space-x-6 sm:space-x-12 text-muted-foreground/60 text-sm sm:text-lg font-medium">
                 <span>Room Editors</span>
                 <span>Deeu Production</span>
                 <span>Veritas Media</span>
