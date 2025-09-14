@@ -131,14 +131,19 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         {/* Main Headline */}
         <h1 
           ref={headingRef}
-          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-0 px-2"
+          className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 opacity-0 px-4 w-full max-w-[90vw] mx-auto"
         >
-          <span className="inline-block" style={{ animationDelay: '0.1s' }}>We build </span>
-          <span className="highlight-text inline-block" style={{ animationDelay: '0.2s' }}>websites </span>
-          <span className="inline-block" style={{ animationDelay: '0.3s' }}>that turn</span>
-          <br className="hidden xs:block" />
-          <span className="inline-block" style={{ animationDelay: '0.4s' }}>visitors into </span>
-          <span className="highlight-text inline-block" style={{ animationDelay: '0.5s' }}>paying customers</span>
+          <div className="flex flex-col">
+            <div className="inline-flex flex-wrap justify-center gap-x-2">
+              <span className="whitespace-nowrap" style={{ animationDelay: '0.1s' }}>We build</span>
+              <span className="highlight-text whitespace-nowrap" style={{ animationDelay: '0.2s' }}>websites</span>
+              <span className="whitespace-nowrap" style={{ animationDelay: '0.3s' }}>that turn</span>
+            </div>
+            <div className="inline-flex flex-wrap justify-center gap-x-2">
+              <span className="whitespace-nowrap" style={{ animationDelay: '0.4s' }}>visitors into</span>
+              <span className="highlight-text whitespace-nowrap" style={{ animationDelay: '0.5s' }}>paying customers</span>
+            </div>
+          </div>
         </h1>
 
         {/* Subtitle */}
@@ -171,7 +176,7 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
         <div ref={logosRef} className="mt-12 sm:mt-16 opacity-0 px-2">
           <div className="overflow-hidden">
             <div className="flex animate-scroll-left whitespace-nowrap">
-              <div className="flex items-center space-x-6 sm:space-x-12 text-muted-foreground/60 text-sm sm:text-lg font-medium">
+              <div className="flex items-center space-x-6 sm:space-x-12 text-white text-sm sm:text-lg font-medium">
                 <span>Room Editors</span>
                 <span>Deeu Production</span>
                 <span>Veritas Media</span>
@@ -181,7 +186,7 @@ const HeroSection = ({ animationComplete }: HeroSectionProps) => {
                 <span>Pinevilla</span>
                 <span>Jhoelokia</span>
               </div>
-              <div className="flex items-center space-x-12 text-muted-foreground/60 text-lg font-medium ml-12">
+              <div className="flex items-center space-x-6 sm:space-x-12 text-white text-sm sm:text-lg font-medium ml-6 sm:ml-12">
                 <span>Room Editors</span>
                 <span>Deeu Production</span>
                 <span>Veritas Media</span>
