@@ -1,0 +1,45 @@
+/* Smooth scroll container */
+[data-scroll-container] {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fix for WebKit browsers to prevent elastic scrolling */
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll content */
+[data-scroll-content] {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Fix for position fixed elements */
+[data-scroll-container] [data-scroll-section] {
+  position: relative;
+}
+
+/* Smooth scroll for all elements */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Performance optimizations */
+[data-scroll-container],
+[data-scroll-content] {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
